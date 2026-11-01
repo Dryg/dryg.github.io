@@ -4,7 +4,7 @@ title = 'dryg'
 disableKinds = ['taxonomy', 'term', 'RSS', 'section']
 
 [params]
-  description = 'Usługi hostowane przez dryg: PDF, narzędzia i powiadomienia ntfy.'
+  description = 'Usługi hostowane przez dryg: PDF, narzędzia, powiadomienia ntfy i czytnik RSS.'
 
 # Każda usługa to jeden blok [[params.services]].
 # software jest opcjonalne — pokazuje się obok nazwy.
@@ -24,3 +24,9 @@ disableKinds = ['taxonomy', 'term', 'RSS', 'section']
   url = 'https://ntfy.dryg.eu'
   software = 'ntfy'
   description = 'Powiadomienia push na telefon i komputer wysyłane zwykłym zapytaniem HTTP.'
+
+[[params.services]]
+  name = 'RSS'
+  url = 'https://rss.dryg.eu'
+  software = 'FreshRSS'
+  description = 'Czytnik kanałów RSS i Atom. Wszystkie subskrypcje w jednym miejscu, synchronizowane między urządzeniami.'
