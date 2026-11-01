@@ -4,22 +4,23 @@ title = 'dryg'
 disableKinds = ['taxonomy', 'term', 'RSS', 'section']
 
 [params]
-  description = 'Usługi hostowane przez dryg'
+  description = 'Usługi hostowane przez dryg: PDF, narzędzia i powiadomienia ntfy.'
 
+# Każda usługa to jeden blok [[params.services]].
+# software jest opcjonalne — pokazuje się obok nazwy.
 [[params.services]]
   name = 'PDF'
   url = 'https://pdf.dryg.eu'
-  icon = '📄'
-  description = 'Edycja, łączenie, dzielenie i konwersja plików PDF — w całości w przeglądarce.'
+  software = 'BentoPDF'
+  description = 'Łączenie, dzielenie, kompresja i konwersja PDF. Pliki nie opuszczają przeglądarki.'
 
 [[params.services]]
   name = 'Tools'
   url = 'https://tools.dryg.eu'
-  icon = '🧰'
-  description = 'Zestaw przydatnych narzędzi dla programistów i administratorów.'
+  description = 'Konwertery, generatory i kalkulatory dla programistów i administratorów.'
 
 [[params.services]]
   name = 'ntfy'
   url = 'https://ntfy.dryg.eu'
-  icon = '🔔'
-  description = 'Powiadomienia push na telefon i komputer przez proste zapytania HTTP.'
+  software = 'ntfy'
+  description = 'Powiadomienia push na telefon i komputer wysyłane zwykłym zapytaniem HTTP.'
