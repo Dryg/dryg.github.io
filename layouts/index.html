@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.Title }}</title>
+  <meta name="description" content="{{ site.Params.description }}">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛰️</text></svg>">
+  <style>
+    :root { --bg:#f6f7f9; --card:#fff; --fg:#1d2330; --muted:#5f6b7a; --border:#e3e6eb; --accent:#2f6fde; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#14171c; --card:#1c2027; --fg:#e7eaf0; --muted:#9aa4b2; --border:#2a303a; --accent:#6ea0ff; }
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; min-height:100vh; display:flex; flex-direction:column; align-items:center;
+           font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background:var(--bg); color:var(--fg); }
+    main { width:100%; max-width:760px; padding:4rem 1.25rem 2rem; flex:1; }
+    h1 { margin:0 0 .25rem; font-size:2rem; }
+    .lead { margin:0 0 2.5rem; color:var(--muted); }
+    .grid { display:grid; gap:1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    a.card { display:block; padding:1.25rem; border:1px solid var(--border); border-radius:12px; background:var(--card);
+             color:inherit; text-decoration:none; transition: border-color .15s, transform .15s; }
+    a.card:hover, a.card:focus-visible { border-color:var(--accent); transform:translateY(-2px); outline:none; }
+    .icon { font-size:1.75rem; }
+    .name { margin:.5rem 0 .25rem; font-weight:600; font-size:1.1rem; }
+    .host { color:var(--accent); font-size:.85rem; }
+    .desc { margin:.6rem 0 0; color:var(--muted); font-size:.92rem; line-height:1.45; }
+    footer { padding:1.5rem; color:var(--muted); font-size:.85rem; }
+    footer a { color:inherit; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>{{ site.Title }}</h1>
+    <p class="lead">{{ site.Params.description }}</p>
+    <div class="grid">
+      {{ range site.Params.services }}
+      <a class="card" href="{{ .url }}">
+        <div class="icon" aria-hidden="true">{{ .icon }}</div>
+        <div class="name">{{ .name }}</div>
+        <div class="host">{{ strings.TrimPrefix "https://" .url }}</div>
+        <p class="desc">{{ .description }}</p>
+      </a>
+      {{ end }}
+    </div>
+  </main>
+  <footer><a href="https://github.com/Dryg">github.com/Dryg</a></footer>
+</body>
+</html>

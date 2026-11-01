@@ -1,4 +1,25 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'dryg.github.io'
-theme = 'hello-friend-ng'
+baseURL = 'https://dryg.github.io/'
+languageCode = 'pl'
+title = 'dryg'
+disableKinds = ['taxonomy', 'term', 'RSS', 'section']
+
+[params]
+  description = 'Usługi hostowane przez dryg'
+
+[[params.services]]
+  name = 'PDF'
+  url = 'https://pdf.dryg.eu'
+  icon = '📄'
+  description = 'Edycja, łączenie, dzielenie i konwersja plików PDF — w całości w przeglądarce.'
+
+[[params.services]]
+  name = 'Tools'
+  url = 'https://tools.dryg.eu'
+  icon = '🧰'
+  description = 'Zestaw przydatnych narzędzi dla programistów i administratorów.'
+
+[[params.services]]
+  name = 'ntfy'
+  url = 'https://ntfy.dryg.eu'
+  icon = '🔔'
+  description = 'Powiadomienia push na telefon i komputer przez proste zapytania HTTP.'
